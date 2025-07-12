@@ -59,16 +59,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
+                        <a class="nav-link" href="<?php echo base_url(); ?>">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('concerts'); ?>">Concerts</a>
+                        <a class="nav-link" href="<?php echo base_url('concerts'); ?>">Konser</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('about'); ?>">About</a>
+                        <a class="nav-link" href="<?php echo base_url('band-trokan'); ?>">Band Trokan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('contact'); ?>">Contact</a>
+                        <a class="nav-link" href="<?php echo base_url('about'); ?>">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('contact'); ?>">Kontak</a>
                     </li>
                 </ul>
                 
@@ -80,10 +83,10 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="<?php echo base_url('dashboard'); ?>">Dashboard</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('orders'); ?>">My Orders</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('profile'); ?>">Profile</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('orders'); ?>">Pesanan Saya</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('profile'); ?>">Profil</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Logout</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('logout'); ?>">Keluar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -94,10 +97,10 @@
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('login'); ?>">Login</a>
+                            <a class="nav-link" href="<?php echo base_url('login'); ?>">Masuk</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('register'); ?>">Register</a>
+                            <a class="nav-link" href="<?php echo base_url('register'); ?>">Daftar</a>
                         </li>
                     <?php endif; ?>
                 </ul>

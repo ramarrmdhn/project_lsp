@@ -4,12 +4,12 @@
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
-                    <h1 class="h3 mb-0">Concerts</h1>
-                    <p class="text-muted mb-0">Discover amazing concerts and book your tickets</p>
+                    <h1 class="h3 mb-0">Konser</h1>
+                    <p class="text-muted mb-0">Temukan konser menakjubkan dan pesan tiket Anda</p>
                 </div>
                 <div>
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
-                        <i class="fas fa-filter me-2"></i>Filters
+                        <i class="fas fa-filter me-2"></i>Filter
                     </button>
                 </div>
             </div>
@@ -27,31 +27,31 @@
                                 <div class="input-group">
                                     <span class="input-group-text"><i class="fas fa-search"></i></span>
                                     <input type="text" class="form-control" name="search" 
-                                           placeholder="Search concerts, artists, venues..." 
+                                           placeholder="Cari konser, artis, venue..." 
                                            value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <select class="form-select" name="status">
-                                    <option value="">All Status</option>
-                                    <option value="upcoming" <?php echo (isset($_GET['status']) && $_GET['status'] == 'upcoming') ? 'selected' : ''; ?>>Upcoming</option>
-                                    <option value="active" <?php echo (isset($_GET['status']) && $_GET['status'] == 'active') ? 'selected' : ''; ?>>Active</option>
-                                    <option value="completed" <?php echo (isset($_GET['status']) && $_GET['status'] == 'completed') ? 'selected' : ''; ?>>Completed</option>
+                                    <option value="">Semua Status</option>
+                                    <option value="upcoming" <?php echo (isset($_GET['status']) && $_GET['status'] == 'upcoming') ? 'selected' : ''; ?>>Akan Datang</option>
+                                    <option value="active" <?php echo (isset($_GET['status']) && $_GET['status'] == 'active') ? 'selected' : ''; ?>>Aktif</option>
+                                    <option value="completed" <?php echo (isset($_GET['status']) && $_GET['status'] == 'completed') ? 'selected' : ''; ?>>Selesai</option>
                                 </select>
                             </div>
                             <div class="col-md-3">
                                 <select class="form-select" name="sort">
-                                    <option value="date_asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'date_asc') ? 'selected' : ''; ?>>Date (Earliest)</option>
-                                    <option value="date_desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'date_desc') ? 'selected' : ''; ?>>Date (Latest)</option>
-                                    <option value="price_asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'price_asc') ? 'selected' : ''; ?>>Price (Low to High)</option>
-                                    <option value="price_desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'price_desc') ? 'selected' : ''; ?>>Price (High to Low)</option>
-                                    <option value="name_asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'name_asc') ? 'selected' : ''; ?>>Name (A-Z)</option>
-                                    <option value="name_desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'name_desc') ? 'selected' : ''; ?>>Name (Z-A)</option>
+                                    <option value="date_asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'date_asc') ? 'selected' : ''; ?>>Tanggal (Terlama)</option>
+                                    <option value="date_desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'date_desc') ? 'selected' : ''; ?>>Tanggal (Terbaru)</option>
+                                    <option value="price_asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'price_asc') ? 'selected' : ''; ?>>Harga (Rendah ke Tinggi)</option>
+                                    <option value="price_desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'price_desc') ? 'selected' : ''; ?>>Harga (Tinggi ke Rendah)</option>
+                                    <option value="name_asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'name_asc') ? 'selected' : ''; ?>>Nama (A-Z)</option>
+                                    <option value="name_desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] == 'name_desc') ? 'selected' : ''; ?>>Nama (Z-A)</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="btn btn-primary w-100">
-                                    <i class="fas fa-search me-2"></i>Search
+                                    <i class="fas fa-search me-2"></i>Cari
                                 </button>
                             </div>
                         </div>
@@ -66,9 +66,9 @@
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
                 <p class="mb-0">
-                    Showing <?php echo isset($total_results) ? $total_results : 0; ?> concerts
+                    Menampilkan <?php echo isset($total_results) ? $total_results : 0; ?> konser
                     <?php if(isset($_GET['search']) && $_GET['search']): ?>
-                        for "<strong><?php echo htmlspecialchars($_GET['search']); ?></strong>"
+                        untuk "<strong><?php echo htmlspecialchars($_GET['search']); ?></strong>"
                     <?php endif; ?>
                 </p>
                 <div class="btn-group" role="group">
@@ -122,19 +122,19 @@
                                     <?php echo ucfirst($concert->status); ?>
                                 </span>
                                 <?php if($concert->available_tickets > 0): ?>
-                                    <small class="text-success">
-                                        <i class="fas fa-check-circle me-1"></i><?php echo $concert->available_tickets; ?> tickets available
-                                    </small>
-                                <?php else: ?>
-                                    <small class="text-danger">
-                                        <i class="fas fa-times-circle me-1"></i>Sold out
-                                    </small>
+                                                                    <small class="text-success">
+                                    <i class="fas fa-check-circle me-1"></i><?php echo $concert->available_tickets; ?> tiket tersedia
+                                </small>
+                            <?php else: ?>
+                                <small class="text-danger">
+                                    <i class="fas fa-times-circle me-1"></i>Habis terjual
+                                </small>
                                 <?php endif; ?>
                             </div>
                             
                             <div class="d-grid">
                                 <a href="<?php echo base_url('concert/' . $concert->id); ?>" class="btn btn-primary">
-                                    <i class="fas fa-eye me-2"></i>View Details
+                                    <i class="fas fa-eye me-2"></i>Lihat Detail
                                 </a>
                             </div>
                         </div>
@@ -145,10 +145,10 @@
             <div class="col-12">
                 <div class="text-center py-5">
                     <i class="fas fa-music fa-4x text-muted mb-3"></i>
-                    <h4 class="text-muted">No concerts found</h4>
-                    <p class="text-muted">Try adjusting your search criteria or check back later for new concerts.</p>
+                    <h4 class="text-muted">Tidak ada konser ditemukan</h4>
+                    <p class="text-muted">Coba sesuaikan kriteria pencarian atau periksa kembali nanti untuk konser baru.</p>
                     <a href="<?php echo base_url('concerts'); ?>" class="btn btn-primary">
-                        <i class="fas fa-refresh me-2"></i>Clear Filters
+                        <i class="fas fa-refresh me-2"></i>Hapus Filter
                     </a>
                 </div>
             </div>

@@ -4,12 +4,12 @@
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
-                    <h1 class="h3 mb-0">Shopping Cart</h1>
-                    <p class="text-muted mb-0">Review your selected tickets</p>
+                    <h1 class="h3 mb-0">Keranjang Belanja</h1>
+                    <p class="text-muted mb-0">Tinjau tiket yang Anda pilih</p>
                 </div>
                 <div>
                     <a href="<?php echo base_url('concerts'); ?>" class="btn btn-outline-primary">
-                        <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                        <i class="fas fa-arrow-left me-2"></i>Lanjutkan Belanja
                     </a>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="col-lg-8">
                 <div class="card shadow mb-4">
                     <div class="card-header">
-                        <h5 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Cart Items</h5>
+                        <h5 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Item Keranjang</h5>
                     </div>
                     <div class="card-body">
                         <?php foreach($cart_items as $item): ?>
@@ -88,7 +88,7 @@
             <div class="col-lg-4">
                 <div class="card shadow sticky-top" style="top: 20px;">
                     <div class="card-header">
-                        <h5 class="mb-0"><i class="fas fa-receipt me-2"></i>Order Summary</h5>
+                        <h5 class="mb-0"><i class="fas fa-receipt me-2"></i>Ringkasan Pesanan</h5>
                     </div>
                     <div class="card-body">
                         <div class="mb-3">
@@ -97,11 +97,11 @@
                                 <span>Rp <?php echo number_format($subtotal, 0, ',', '.'); ?></span>
                             </div>
                             <div class="d-flex justify-content-between mb-2">
-                                <span>Service Fee:</span>
+                                <span>Biaya Layanan:</span>
                                 <span>Rp <?php echo number_format($service_fee, 0, ',', '.'); ?></span>
                             </div>
                             <div class="d-flex justify-content-between mb-2">
-                                <span>Tax:</span>
+                                <span>Pajak:</span>
                                 <span>Rp <?php echo number_format($tax, 0, ',', '.'); ?></span>
                             </div>
                             <hr>
@@ -112,37 +112,37 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Payment Method</label>
+                            <label class="form-label">Metode Pembayaran</label>
                             <select class="form-select" id="paymentMethod">
-                                <option value="bank_transfer">Bank Transfer</option>
-                                <option value="credit_card">Credit Card</option>
+                                <option value="bank_transfer">Transfer Bank</option>
+                                <option value="credit_card">Kartu Kredit</option>
                                 <option value="e_wallet">E-Wallet</option>
-                                <option value="cash">Cash on Delivery</option>
+                                <option value="cash">Bayar di Tempat</option>
                             </select>
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Delivery Method</label>
+                            <label class="form-label">Metode Pengiriman</label>
                             <select class="form-select" id="deliveryMethod">
-                                <option value="email">Email (Free)</option>
+                                <option value="email">Email (Gratis)</option>
                                 <option value="sms">SMS (+Rp 5,000)</option>
-                                <option value="physical">Physical Ticket (+Rp 10,000)</option>
+                                <option value="physical">Tiket Fisik (+Rp 10,000)</option>
                             </select>
                         </div>
 
                         <div class="d-grid gap-2">
                             <button type="button" class="btn btn-primary btn-lg" onclick="proceedToCheckout()">
-                                <i class="fas fa-credit-card me-2"></i>Proceed to Checkout
+                                <i class="fas fa-credit-card me-2"></i>Lanjut ke Pembayaran
                             </button>
                             <button type="button" class="btn btn-outline-secondary" onclick="clearCart()">
-                                <i class="fas fa-trash me-2"></i>Clear Cart
+                                <i class="fas fa-trash me-2"></i>Kosongkan Keranjang
                             </button>
                         </div>
 
                         <div class="mt-3">
                             <div class="alert alert-info">
                                 <i class="fas fa-info-circle me-2"></i>
-                                <strong>Secure Payment:</strong> Your payment information is encrypted and secure.
+                                <strong>Pembayaran Aman:</strong> Informasi pembayaran Anda dienkripsi dan aman.
                             </div>
                         </div>
                     </div>
@@ -156,10 +156,10 @@
                 <div class="card shadow">
                     <div class="card-body text-center py-5">
                         <i class="fas fa-shopping-cart fa-4x text-muted mb-3"></i>
-                        <h4 class="text-muted">Your cart is empty</h4>
-                        <p class="text-muted mb-4">Looks like you haven't added any tickets to your cart yet.</p>
+                        <h4 class="text-muted">Keranjang Anda kosong</h4>
+                        <p class="text-muted mb-4">Sepertinya Anda belum menambahkan tiket ke keranjang.</p>
                         <a href="<?php echo base_url('concerts'); ?>" class="btn btn-primary">
-                            <i class="fas fa-search me-2"></i>Browse Concerts
+                            <i class="fas fa-search me-2"></i>Jelajahi Konser
                         </a>
                     </div>
                 </div>

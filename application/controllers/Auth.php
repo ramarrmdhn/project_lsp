@@ -45,9 +45,9 @@ class Auth extends CI_Controller {
                     
                     // Redirect based on role
                     if ($user->role === 'admin') {
-                        redirect('admin/dashboard');
+                        redirect('home');
                     } else {
-                        redirect('home/dashboard');
+                        redirect('home');
                     }
                 } else {
                     $this->session->set_flashdata('error', 'Invalid email or password.');

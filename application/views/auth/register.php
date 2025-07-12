@@ -76,7 +76,7 @@
                             <h2 class="mb-0">
                                 <i class="fas fa-ticket-alt me-2"></i>Ticket Concert
                             </h2>
-                            <p class="mb-0 mt-2">Create your account to start booking tickets</p>
+                            <p class="mb-0 mt-2">Buat akun Anda untuk mulai memesan tiket</p>
                         </div>
                         
                         <div class="register-body">
@@ -101,7 +101,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="username" class="form-label">
-                                                <i class="fas fa-user me-2"></i>Username
+                                                <i class="fas fa-user me-2"></i>Nama Pengguna
                                             </label>
                                             <input type="text" class="form-control" id="username" name="username" 
                                                    value="<?php echo set_value('username'); ?>" required>
@@ -111,7 +111,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="email" class="form-label">
-                                                <i class="fas fa-envelope me-2"></i>Email Address
+                                                <i class="fas fa-envelope me-2"></i>Alamat Email
                                             </label>
                                             <input type="email" class="form-control" id="email" name="email" 
                                                    value="<?php echo set_value('email'); ?>" required>
@@ -124,7 +124,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="full_name" class="form-label">
-                                                <i class="fas fa-id-card me-2"></i>Full Name
+                                                <i class="fas fa-id-card me-2"></i>Nama Lengkap
                                             </label>
                                             <input type="text" class="form-control" id="full_name" name="full_name" 
                                                    value="<?php echo set_value('full_name'); ?>" required>
@@ -134,7 +134,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="phone" class="form-label">
-                                                <i class="fas fa-phone me-2"></i>Phone Number
+                                                <i class="fas fa-phone me-2"></i>Nomor Telepon
                                             </label>
                                             <input type="tel" class="form-control" id="phone" name="phone" 
                                                    value="<?php echo set_value('phone'); ?>" required>
@@ -145,7 +145,7 @@
 
                                 <div class="mb-3">
                                     <label for="address" class="form-label">
-                                        <i class="fas fa-map-marker-alt me-2"></i>Address
+                                        <i class="fas fa-map-marker-alt me-2"></i>Alamat
                                     </label>
                                     <textarea class="form-control" id="address" name="address" rows="3"><?php echo set_value('address'); ?></textarea>
                                     <?php echo form_error('address', '<div class="text-danger small">', '</div>'); ?>
@@ -155,7 +155,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="password" class="form-label">
-                                                <i class="fas fa-lock me-2"></i>Password
+                                                <i class="fas fa-lock me-2"></i>Kata Sandi
                                             </label>
                                             <div class="input-group">
                                                 <input type="password" class="form-control" id="password" name="password" required>
@@ -170,7 +170,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="confirm_password" class="form-label">
-                                                <i class="fas fa-lock me-2"></i>Confirm Password
+                                                <i class="fas fa-lock me-2"></i>Konfirmasi Kata Sandi
                                             </label>
                                             <div class="input-group">
                                                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
@@ -186,15 +186,15 @@
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
                                     <label class="form-check-label" for="terms">
-                                        I agree to the <a href="<?php echo base_url('terms'); ?>" target="_blank">Terms & Conditions</a> 
-                                        and <a href="<?php echo base_url('privacy'); ?>" target="_blank">Privacy Policy</a>
+                                        Saya setuju dengan <a href="<?php echo base_url('terms'); ?>" target="_blank">Syarat & Ketentuan</a> 
+                                        dan <a href="<?php echo base_url('privacy'); ?>" target="_blank">Kebijakan Privasi</a>
                                     </label>
                                     <?php echo form_error('terms', '<div class="text-danger small">', '</div>'); ?>
                                 </div>
 
                                 <div class="d-grid mb-3">
                                     <button type="submit" class="btn btn-primary">
-                                        <i class="fas fa-user-plus me-2"></i>Create Account
+                                        <i class="fas fa-user-plus me-2"></i>Buat Akun
                                     </button>
                                 </div>
                             <?php echo form_close(); ?>

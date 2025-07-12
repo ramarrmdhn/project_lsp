@@ -64,6 +64,11 @@ $route['concerts/venue/(:any)'] = 'concert/venue/$1';
 $route['concerts/category/(:any)'] = 'concert/category/$1';
 $route['search'] = 'home/search';
 
+// Band Trokan routes
+$route['band-trokan'] = 'bandtrokan/index';
+$route['band-trokan/checkout'] = 'bandtrokan/checkout';
+$route['band-trokan/process-payment'] = 'bandtrokan/process_payment';
+
 // Auth routes
 $route['login'] = 'auth/login';
 $route['register'] = 'auth/register';
@@ -79,6 +84,7 @@ $route['order/(:any)'] = 'order/view/$1';
 $route['order/cancel/(:any)'] = 'order/cancel/$1';
 $route['order/payment/(:any)'] = 'order/payment/$1';
 $route['order/download/(:any)'] = 'order/download_ticket/$1';
+$route['orders/success/(:any)'] = 'orders/success/$1';
 $route['cart'] = 'cart/index';
 $route['cart/add'] = 'cart/add';
 $route['cart/update'] = 'cart/update';

@@ -77,7 +77,7 @@
                             <h2 class="mb-0">
                                 <i class="fas fa-ticket-alt me-2"></i>Ticket Concert
                             </h2>
-                            <p class="mb-0 mt-2">Welcome back! Please login to your account.</p>
+                            <p class="mb-0 mt-2">Selamat datang kembali! Silakan masuk ke akun Anda.</p>
                         </div>
                         
                         <div class="login-body">
@@ -100,7 +100,7 @@
                             <?php echo form_open('auth/login', ['class' => 'needs-validation', 'novalidate' => '']); ?>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">
-                                        <i class="fas fa-envelope me-2"></i>Email Address
+                                        <i class="fas fa-envelope me-2"></i>Alamat Email
                                     </label>
                                     <input type="email" class="form-control" id="email" name="email" 
                                            value="<?php echo set_value('email'); ?>" required>
@@ -109,7 +109,7 @@
 
                                 <div class="mb-3">
                                     <label for="password" class="form-label">
-                                        <i class="fas fa-lock me-2"></i>Password
+                                        <i class="fas fa-lock me-2"></i>Kata Sandi
                                     </label>
                                     <div class="input-group">
                                         <input type="password" class="form-control" id="password" name="password" required>
@@ -123,20 +123,20 @@
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="remember" name="remember">
                                     <label class="form-check-label" for="remember">
-                                        Remember me
+                                        Ingat saya
                                     </label>
                                 </div>
 
                                 <div class="d-grid mb-3">
                                     <button type="submit" class="btn btn-primary">
-                                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                                        <i class="fas fa-sign-in-alt me-2"></i>Masuk
                                     </button>
                                 </div>
                             <?php echo form_close(); ?>
 
                             <!-- Social Login -->
                             <div class="social-login">
-                                <p class="text-center text-muted mb-3">Or login with</p>
+                                <p class="text-center text-muted mb-3">Atau masuk dengan</p>
                                 <div class="row g-2">
                                     <div class="col-6">
                                         <button class="btn btn-outline-primary btn-social w-100">
@@ -154,14 +154,14 @@
                             <!-- Links -->
                             <div class="text-center mt-4">
                                 <p class="mb-2">
-                                    Don't have an account? 
+                                    Belum punya akun? 
                                     <a href="<?php echo base_url('register'); ?>" class="text-decoration-none">
-                                        Register here
+                                        Daftar di sini
                                     </a>
                                 </p>
                                 <p class="mb-0">
                                     <a href="<?php echo base_url('forgot-password'); ?>" class="text-decoration-none">
-                                        <i class="fas fa-key me-1"></i>Forgot your password?
+                                        <i class="fas fa-key me-1"></i>Lupa kata sandi?
                                     </a>
                                 </p>
                             </div>
@@ -169,7 +169,7 @@
                             <!-- Back to Home -->
                             <div class="text-center mt-4">
                                 <a href="<?php echo base_url(); ?>" class="text-decoration-none">
-                                    <i class="fas fa-arrow-left me-1"></i>Back to Home
+                                    <i class="fas fa-arrow-left me-1"></i>Kembali ke Beranda
                                 </a>
                             </div>
                         </div>

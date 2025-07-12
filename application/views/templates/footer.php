@@ -15,16 +15,16 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h5>Quick Links</h5>
+                    <h5>Tautan Cepat</h5>
                     <ul class="list-unstyled">
-                        <li><a href="<?php echo base_url(); ?>" class="text-muted">Home</a></li>
-                        <li><a href="<?php echo base_url('concerts'); ?>" class="text-muted">Concerts</a></li>
-                        <li><a href="<?php echo base_url('about'); ?>" class="text-muted">About Us</a></li>
-                        <li><a href="<?php echo base_url('contact'); ?>" class="text-muted">Contact</a></li>
+                        <li><a href="<?php echo base_url(); ?>" class="text-muted">Beranda</a></li>
+                        <li><a href="<?php echo base_url('concerts'); ?>" class="text-muted">Konser</a></li>
+                        <li><a href="<?php echo base_url('about'); ?>" class="text-muted">Tentang Kami</a></li>
+                        <li><a href="<?php echo base_url('contact'); ?>" class="text-muted">Kontak</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Contact Info</h5>
+                    <h5>Informasi Kontak</h5>
                     <ul class="list-unstyled text-muted">
                         <li><i class="fas fa-map-marker-alt me-2"></i>Jakarta, Indonesia</li>
                         <li><i class="fas fa-phone me-2"></i>+62 812-3456-7890</li>
@@ -35,11 +35,11 @@
             <hr class="my-4">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="text-muted mb-0">&copy; 2024 Ticket Concert. All rights reserved.</p>
+                    <p class="text-muted mb-0">&copy; 2024 Ticket Concert. Semua hak dilindungi.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="<?php echo base_url('terms'); ?>" class="text-muted me-3">Terms & Conditions</a>
-                    <a href="<?php echo base_url('privacy'); ?>" class="text-muted">Privacy Policy</a>
+                    <a href="<?php echo base_url('terms'); ?>" class="text-muted me-3">Syarat & Ketentuan</a>
+                    <a href="<?php echo base_url('privacy'); ?>" class="text-muted">Kebijakan Privasi</a>
                 </div>
             </div>
         </div>

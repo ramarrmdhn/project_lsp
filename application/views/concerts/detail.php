@@ -4,8 +4,8 @@
         <div class="col-12">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Home</a></li>
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('concerts'); ?>">Concerts</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>">Beranda</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('concerts'); ?>">Konser</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><?php echo $concert->title; ?></li>
                 </ol>
             </nav>
@@ -58,12 +58,12 @@
                             <?php if($concert->available_tickets > 0): ?>
                                 <div class="alert alert-success">
                                     <i class="fas fa-check-circle me-2"></i>
-                                    <?php echo $concert->available_tickets; ?> tickets available
+                                    <?php echo $concert->available_tickets; ?> tiket tersedia
                                 </div>
                             <?php else: ?>
                                 <div class="alert alert-danger">
                                     <i class="fas fa-times-circle me-2"></i>
-                                    Sold out
+                                    Habis terjual
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -74,14 +74,14 @@
             <!-- Concert Description -->
             <div class="card shadow mb-4">
                 <div class="card-header">
-                    <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>About This Concert</h5>
+                    <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Tentang Konser Ini</h5>
                 </div>
                 <div class="card-body">
                     <p class="mb-3"><?php echo $concert->description; ?></p>
                     
                     <?php if($concert->additional_info): ?>
                         <div class="mt-4">
-                            <h6>Additional Information:</h6>
+                            <h6>Informasi Tambahan:</h6>
                             <p class="mb-0"><?php echo $concert->additional_info; ?></p>
                         </div>
                     <?php endif; ?>
@@ -91,21 +91,21 @@
             <!-- Venue Information -->
             <div class="card shadow mb-4">
                 <div class="card-header">
-                    <h5 class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Venue Information</h5>
+                    <h5 class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Informasi Venue</h5>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <h6>Venue Details</h6>
-                            <p class="mb-2"><strong>Name:</strong> <?php echo $concert->venue; ?></p>
-                            <p class="mb-2"><strong>Capacity:</strong> <?php echo number_format($concert->capacity, 0, ',', '.'); ?> people</p>
-                            <p class="mb-0"><strong>Address:</strong> <?php echo $concert->venue_address ?? 'Address not available'; ?></p>
+                            <h6>Detail Venue</h6>
+                            <p class="mb-2"><strong>Nama:</strong> <?php echo $concert->venue; ?></p>
+                            <p class="mb-2"><strong>Kapasitas:</strong> <?php echo number_format($concert->capacity, 0, ',', '.'); ?> orang</p>
+                            <p class="mb-0"><strong>Alamat:</strong> <?php echo $concert->venue_address ?? 'Alamat tidak tersedia'; ?></p>
                         </div>
                         <div class="col-md-6">
-                            <h6>Getting There</h6>
-                            <p class="mb-2"><i class="fas fa-car me-2"></i>Parking available</p>
-                            <p class="mb-2"><i class="fas fa-subway me-2"></i>Near public transportation</p>
-                            <p class="mb-0"><i class="fas fa-wheelchair me-2"></i>Wheelchair accessible</p>
+                            <h6>Cara Menuju Lokasi</h6>
+                            <p class="mb-2"><i class="fas fa-car me-2"></i>Tersedia tempat parkir</p>
+                            <p class="mb-2"><i class="fas fa-subway me-2"></i>Dekat transportasi umum</p>
+                            <p class="mb-0"><i class="fas fa-wheelchair me-2"></i>Akses kursi roda</p>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
         <div class="col-lg-4">
             <div class="card shadow sticky-top" style="top: 20px;">
                 <div class="card-header">
-                    <h5 class="mb-0"><i class="fas fa-ticket-alt me-2"></i>Select Tickets</h5>
+                    <h5 class="mb-0"><i class="fas fa-ticket-alt me-2"></i>Pilih Tiket</h5>
                 </div>
                 <div class="card-body">
                     <?php if($concert->status == 'active' && $concert->available_tickets > 0): ?>
@@ -132,7 +132,7 @@
                                                 <small class="text-muted"><?php echo $ticket->description; ?></small>
                                             </div>
                                             <span class="badge bg-<?php echo $ticket->available > 0 ? 'success' : 'danger'; ?>">
-                                                <?php echo $ticket->available > 0 ? $ticket->available . ' available' : 'Sold out'; ?>
+                                                <?php echo $ticket->available > 0 ? $ticket->available . ' tersedia' : 'Habis terjual'; ?>
                                             </span>
                                         </div>
                                         
@@ -152,7 +152,7 @@
                                         
                                         <?php if($ticket->available <= 0): ?>
                                             <div class="text-center">
-                                                <span class="text-danger">Sold out</span>
+                                                <span class="text-danger">Habis terjual</span>
                                             </div>
                                         <?php endif; ?>
                                     </div>
@@ -160,25 +160,25 @@
                                 
                                 <div class="border-top pt-3">
                                     <div class="d-flex justify-content-between mb-2">
-                                        <span>Total Tickets:</span>
+                                        <span>Total Tiket:</span>
                                         <span id="totalTickets">0</span>
                                     </div>
                                     <div class="d-flex justify-content-between mb-3">
-                                        <span>Total Amount:</span>
+                                        <span>Total Harga:</span>
                                         <span id="totalAmount" class="fw-bold text-primary">Rp 0</span>
                                     </div>
                                     
                                     <div class="d-grid">
                                         <button type="submit" class="btn btn-primary" id="addToCartBtn" disabled>
-                                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                            <i class="fas fa-shopping-cart me-2"></i>Tambah ke Keranjang
                                         </button>
                                     </div>
                                 </div>
                             <?php else: ?>
                                 <div class="text-center py-4">
                                     <i class="fas fa-ticket-alt fa-3x text-muted mb-3"></i>
-                                    <h6 class="text-muted">No tickets available</h6>
-                                    <p class="text-muted small">Tickets will be available soon</p>
+                                    <h6 class="text-muted">Tidak ada tiket tersedia</h6>
+                                    <p class="text-muted small">Tiket akan tersedia segera</p>
                                 </div>
                             <?php endif; ?>
                         </form>
@@ -186,12 +186,12 @@
                         <div class="text-center py-4">
                             <?php if($concert->status != 'active'): ?>
                                 <i class="fas fa-clock fa-3x text-muted mb-3"></i>
-                                <h6 class="text-muted">Tickets not available yet</h6>
-                                <p class="text-muted small">Tickets will be available when the concert is active</p>
+                                <h6 class="text-muted">Tiket belum tersedia</h6>
+                                <p class="text-muted small">Tiket akan tersedia ketika konser aktif</p>
                             <?php else: ?>
                                 <i class="fas fa-times-circle fa-3x text-danger mb-3"></i>
-                                <h6 class="text-danger">Sold out</h6>
-                                <p class="text-muted small">All tickets have been sold</p>
+                                <h6 class="text-danger">Habis terjual</h6>
+                                <p class="text-muted small">Semua tiket telah terjual</p>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>

@@ -91,7 +91,7 @@ class Home extends CI_Controller {
             
             if ($this->form_validation->run()) {
                 // Send email (implement email functionality)
-                $this->session->set_flashdata('success', 'Your message has been sent successfully!');
+                $this->session->set_flashdata('success', 'Pesan Anda telah berhasil dikirim!');
                 redirect('home/contact');
             }
         }
