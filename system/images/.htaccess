@@ -1,0 +1,29 @@
+# Deny access to all files in this directory
+Order Deny,Allow
+Deny from all
+
+# Prevent access to image files
+<Files "*.png">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.jpg">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.jpeg">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.gif">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.ico">
+    Order Deny,Allow
+    Deny from all
+</Files> 

@@ -1,0 +1,70 @@
+# Deny access to all files in this directory
+Order Deny,Allow
+Deny from all
+
+# Prevent access to PHP files
+<Files "*.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to configuration files
+<Files "config.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "database.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "routes.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "autoload.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "constants.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "doctypes.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "foreign_chars.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "hooks.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "memcached.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "mimes.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "profiler.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "user_agents.php">
+    Order Deny,Allow
+    Deny from all
+</Files> 

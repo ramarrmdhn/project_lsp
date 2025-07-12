@@ -1,0 +1,24 @@
+# Deny access to all files in this directory
+Order Deny,Allow
+Deny from all
+
+# Prevent access to font files
+<Files "*.ttf">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.otf">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.woff">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.woff2">
+    Order Deny,Allow
+    Deny from all
+</Files> 

@@ -1,0 +1,27 @@
+# Deny access to all files in this directory
+Order Deny,Allow
+Deny from all
+
+# Prevent access to PHP files
+<Files "*.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to configuration files
+<Files "*.ini">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to log files
+<Files "*.log">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to cache files
+<Files "*.cache">
+    Order Deny,Allow
+    Deny from all
+</Files>

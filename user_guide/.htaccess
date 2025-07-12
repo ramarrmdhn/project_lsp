@@ -1,0 +1,27 @@
+# Deny access to all files in this directory
+Order Deny,Allow
+Deny from all
+
+# Prevent access to HTML files
+<Files "*.html">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to PHP files
+<Files "*.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to CSS files
+<Files "*.css">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to JavaScript files
+<Files "*.js">
+    Order Deny,Allow
+    Deny from all
+</Files> 

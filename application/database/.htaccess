@@ -1,0 +1,20 @@
+# Deny access to all files in this directory
+Order Deny,Allow
+Deny from all
+
+# Prevent access to PHP files
+<Files "*.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Prevent access to database files
+<Files "*.sql">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "*.db">
+    Order Deny,Allow
+    Deny from all
+</Files> 
